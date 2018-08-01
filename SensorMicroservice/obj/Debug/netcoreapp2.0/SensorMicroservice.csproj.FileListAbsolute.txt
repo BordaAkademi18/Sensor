@@ -1,0 +1,11 @@
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.deps.json
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.runtimeconfig.json
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.runtimeconfig.dev.json
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.dll
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.pdb
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.csprojAssemblyReference.cache
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.csproj.CoreCompileInputs.cache
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.AssemblyInfoInputs.cache
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.AssemblyInfo.cs
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.dll
+c:\users\ihsan.balaban\source\repos\ALESTA\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.pdb
