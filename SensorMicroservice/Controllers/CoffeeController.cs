@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SensorMicroservice.Controllers
 {
-    [Route("CoffeeMicroservice")]
+    [Route("api/[controller]")]
     public class CoffeeController : Controller
     {
 

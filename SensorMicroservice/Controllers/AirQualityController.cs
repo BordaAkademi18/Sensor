@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SensorMicroservice.Controllers
 {
-    [Route("AirQualityMicroservice")]
+    [Route("api/[controller]")]
     public class AirQualityController : Controller
     {
 
@@ -18,7 +18,12 @@ namespace SensorMicroservice.Controllers
             this.repository = repository;
         }
 
+        [HttpGet]
 
+        public int test()
+        {
+            return 4;
+        }
 
 
     }
