@@ -27,7 +27,7 @@ namespace SensorMicroservice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<SensorDbContext>(options => options.UseInMemoryDatabase("SensorDbContext"));
+            services.AddDbContext<SensorDbContext>(options => options.UseInMemoryDatabase("SensorDbContext"));
             services.AddMvc();
             services.AddTransient<IAirQualityRepository, AirQualityRepository>();
             services.AddTransient<IRestRoomRepository, RestRoomRepository>();
