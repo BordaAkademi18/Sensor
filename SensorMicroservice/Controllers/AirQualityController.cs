@@ -18,13 +18,11 @@ namespace SensorMicroservice.Controllers
             this.repository = repository;
         }
 
-        [HttpGet]
-
+        [Route("test")]
         public int test()
         {
             return 4;
         }
-
-
+       
     }
 }

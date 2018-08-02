@@ -8,10 +8,10 @@ namespace SensorMicroservice.Models
 {
     public class Coffee : IModelTimer, BaseModel
     {
-        public DateTime BeginProcess { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime EndProcess { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int HardwareId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int ID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime BeginProcess { get ; set ; }
+        public DateTime EndProcess { get ; set ; }
+        public int HardwareId { get; set; }
+        public int ID { get; set; }
 
         public int Level;
 
