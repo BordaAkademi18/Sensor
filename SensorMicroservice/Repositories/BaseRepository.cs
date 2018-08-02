@@ -36,5 +36,7 @@ namespace SensorMicroservice.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public virtual void SaveChanges() => this.sensorDbContext.SaveChanges();
     }
 }
