@@ -16,28 +16,43 @@ namespace SensorMicroservice.Repositories
             
         }
 
+        
 
-       
+        public override void Add(Coffee model)
+        {
+            
 
-        public override void Update(Coffee entity)
+
+            model.OnAdd();
+            
+            sensorDbContext.Coffee.Add(model);
+
+            SaveChanges();
+
+        }
+
+
+        public override void Update(Coffee model)
         {
 
             
 
         }
 
-        public override void Delete(Coffee entity)
+        public override void Delete(Coffee model)
         {
             
         }
 
-       
 
-       
+
+
 
         public override IEnumerable<Coffee> GetList()
         {
 
+
+            return base.GetList();
         }
 
     }

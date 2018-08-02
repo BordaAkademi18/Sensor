@@ -12,24 +12,33 @@ namespace SensorMicroservice.Models
         public DateTime EndProcess { get ; set ; }
         public int HardwareId { get; set; }
         public int ID { get; set; }
+        public int CurrentLevel { get; set; }
 
-
-        public int CurrentLevel;
 
         public void OnAdd()
         {
 
             BeginProcess = DateTime.Now;
 
-            EndProcess = null;
+            EndProcess = DateTime.Now;
         
+           
         }
 
         public void OnUpdate()
         {
+
+            EndProcess = DateTime.Now;
             
+
+        }
+
+        private void OnUpdate(int level)
+        {
+
 
 
         }
+
     }
 }
