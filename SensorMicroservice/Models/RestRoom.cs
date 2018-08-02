@@ -8,21 +8,27 @@ namespace SensorMicroservice.Models
 {
     public class RestRoom : IModelTimer, BaseModel
     {
-        public DateTime BeginProcess { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime EndProcess { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int HardwareId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int ID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime BeginProcess { get; set; }
+        public DateTime EndProcess { get; set; }
+        public int HardwareId { get; set; }
+        public int ID { get; set; }
+        public Boolean Value { get; set; }
 
-
-        public int Value;
         public void OnAdd()
         {
-            throw new NotImplementedException();
+            this.BeginProcess = DateTime.Now;
+            this.Value = true;
         }
 
         public void OnUpdate()
         {
-            throw new NotImplementedException();
+            this.EndProcess = DateTime.Now;
+            this.Value = false;
+        }
+
+        public void FromConverterForAdding(Converter converterModel)
+        {
+            this.HardwareId = Convert.ToInt32(converterModel.ID);
         }
     }
 }
