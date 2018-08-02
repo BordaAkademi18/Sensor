@@ -9,10 +9,10 @@ namespace SensorMicroservice.RepositoryInterfaces
 {
     public interface IAirQualityRepository : IBaseRepository<AirQuality>
     {
-        
+
 
         AirQuality Get(DateTime TimeBegin, DateTime TimeEnd);
-        
+
 
     }
 }

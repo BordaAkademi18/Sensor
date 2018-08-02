@@ -13,18 +13,23 @@ namespace SensorMicroservice.Models
         public int HardwareId { get; set; }
         public int ID { get; set; }
 
-        public int Level;
+
+        public int CurrentLevel;
 
         public void OnAdd()
         {
 
-            //make isDeleted false initially
-            throw new NotImplementedException();
+            BeginProcess = DateTime.Now;
+
+            EndProcess = null;
+        
         }
 
         public void OnUpdate()
         {
-            throw new NotImplementedException();
+            
+
+
         }
     }
 }

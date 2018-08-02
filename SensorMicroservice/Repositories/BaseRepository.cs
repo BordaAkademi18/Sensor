@@ -17,24 +17,25 @@ namespace SensorMicroservice.Repositories
             this.sensorDbContext = sensorDbContext;
         }
 
-        public void Add(TModel model)
+        public virtual void Add(TModel model)
+        {
+            throw new NotImplementedException();
+        }
+        
+        public virtual void Delete(TModel model)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(TModel model)
+        public virtual IEnumerable<TModel> GetList()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TModel> GetList()
+        public virtual void Update(TModel model)
         {
             throw new NotImplementedException();
         }
-
-        public void Update(TModel model)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual void SaveChanges() => this.sensorDbContext.SaveChanges();
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SensorMicroservice.Models;
+using SensorMicroservice.Repositories;
 using SensorMicroservice.RepositoryInterfaces;
 using System;
 using System.Collections.Generic;
@@ -11,14 +13,15 @@ namespace SensorMicroservice.Controllers
     public class CoffeeController : Controller
     {
 
-        private readonly ICoffeeRepository repository;
+        private readonly CoffeeRepository repository;
 
-        public CoffeeController(ICoffeeRepository repository)
+        public CoffeeController(CoffeeRepository repository)
         {
             this.repository = repository;
         }
 
-
+        
+      
 
 
     }

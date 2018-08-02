@@ -10,13 +10,36 @@ namespace SensorMicroservice.Repositories
 {
     public class CoffeeRepository:BaseRepository<Coffee>,ICoffeeRepository
     {
+        
         public CoffeeRepository(SensorDbContext sensorDbContext):base(sensorDbContext)
+        {
+            
+        }
+
+
+       
+
+        public override void Update(Coffee entity)
+        {
+
+            
+
+        }
+
+        public override void Delete(Coffee entity)
+        {
+            
+        }
+
+       
+
+       
+
+        public override IEnumerable<Coffee> GetList()
         {
 
         }
 
-
-        
     }
 
 
