@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace SensorMicroservice.ModelInterfaces
 {
-    public interface BaseModel
+    public abstract class BaseModel
     {
 
-        int HardwareId { get; set; }
+        public int HardwareId { get; set; }
 
-        int ID { get; set; }
+        public int ID { get; set; }
 
 
     }

@@ -1,17 +1,23 @@
 ﻿using SensorMicroservice.ModelInterfaces;
+using SensorMicroservice.Models.Annotations;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace SensorMicroservice.Models
 {
-    public class Coffee : IModelTimer, BaseModel
+    [AlestaTable("Coffee")]
+    public class Coffee : BaseModel, IModelTimer
     {
+        [Column("BeginProcess")]
         public DateTime BeginProcess { get ; set ; }
+
+        [Column("EndProcess")]
         public DateTime EndProcess { get ; set ; }
-        public int HardwareId { get; set; }
-        public int ID { get; set; }
+
+
         public int CurrentLevel { get; set; }
 
 

@@ -1,4 +1,5 @@
-﻿using SensorMicroservice.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using SensorMicroservice.Context;
 using SensorMicroservice.ModelInterfaces;
 using SensorMicroservice.RepositoryInterfaces;
 using System;
@@ -11,6 +12,14 @@ namespace SensorMicroservice.Repositories
     public abstract class BaseRepository<TModel> : IBaseRepository<TModel> where TModel : BaseModel
     {
         protected readonly SensorDbContext sensorDbContext;
+
+        protected DbSet<TModel> DBSet
+        {
+            get
+            {
+                return this.sensorDbContext.Set<TModel>();
+            }
+        }
 
         public BaseRepository(SensorDbContext sensorDbContext)
         {
