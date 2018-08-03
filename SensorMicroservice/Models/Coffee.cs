@@ -18,9 +18,9 @@ namespace SensorMicroservice.Models
         public void OnAdd()
         {
 
-            BeginProcess = DateTime.Now;
+            this.BeginProcess = DateTime.Now;
 
-            EndProcess = DateTime.Now;
+            this.EndProcess = DateTime.Now;
         
            
         }
@@ -28,7 +28,7 @@ namespace SensorMicroservice.Models
         public void OnUpdate()
         {
 
-            EndProcess = DateTime.Now;
+            this.EndProcess = DateTime.Now;
             
 
         }
