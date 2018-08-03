@@ -13,9 +13,9 @@ namespace SensorMicroservice.Controllers
     public class CoffeeController : Controller
     {
 
-        private readonly ICoffeeRepository repository;
+        private readonly CoffeeRepository repository;
 
-        public CoffeeController(ICoffeeRepository repository)
+        public CoffeeController(CoffeeRepository repository)
         {
             this.repository = repository;
         }
@@ -31,8 +31,11 @@ namespace SensorMicroservice.Controllers
             }
 
 
+            this.repository.Converter(item);
 
-            //this.repository.Add(item);  Continue here
+        
+
+            
             return Ok(item);
         }
         
