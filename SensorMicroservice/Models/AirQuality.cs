@@ -8,12 +8,9 @@ namespace SensorMicroservice.Models
 {
     public class AirQuality : BaseModel
     {
-        public int HardwareId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int ID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        public int Value { get; set; }
+        public DateTime Time { get; set; }
 
-        public int Value;
-
-        public DateTime Time;
     }
 }
