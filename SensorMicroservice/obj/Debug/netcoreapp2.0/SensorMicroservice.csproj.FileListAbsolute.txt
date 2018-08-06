@@ -37,3 +37,14 @@ D:\projects\visual_studio_projects\AlestaAfterEdit\Sensor\SensorMicroservice\bin
 D:\projects\visual_studio_projects\AlestaAfterEdit\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.runtimeconfig.dev.json
 D:\projects\visual_studio_projects\AlestaAfterEdit\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.dll
 D:\projects\visual_studio_projects\AlestaAfterEdit\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.pdb
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.deps.json
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.runtimeconfig.json
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.runtimeconfig.dev.json
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.dll
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\bin\Debug\netcoreapp2.0\SensorMicroservice.pdb
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.csprojAssemblyReference.cache
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.csproj.CoreCompileInputs.cache
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.AssemblyInfoInputs.cache
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.AssemblyInfo.cs
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.dll
+C:\Users\ertugrul.gamgam\Desktop\ert\Sensor\SensorMicroservice\obj\Debug\netcoreapp2.0\SensorMicroservice.pdb

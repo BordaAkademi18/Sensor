@@ -18,6 +18,7 @@ namespace SensorMicroservice.RepositoryInterfaces
 
         IEnumerable<TModel> GetList();
 
+      
 
 
 
