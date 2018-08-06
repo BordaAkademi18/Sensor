@@ -8,6 +8,7 @@ namespace SensorMicroservice.RepositoryInterfaces
 {
     public interface IRestRoomRepository:IBaseRepository<RestRoom> 
     {
-
+        void PostRequest(Converter converterModel);
+        List<Converter> GetRequest();
     }
 }
