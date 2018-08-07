@@ -13259,11 +13259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\visual_studio_projects\\Sensor\\SensorMicroservice\\SensorMicroservice.csproj",
+      "projectUniqueName": "D:\\projects\\visual_studio_projects\\Borda.Alesta.Service.Sensor.Web\\SensorMicroservice\\SensorMicroservice.csproj",
       "projectName": "SensorMicroservice",
-      "projectPath": "D:\\projects\\visual_studio_projects\\Sensor\\SensorMicroservice\\SensorMicroservice.csproj",
+      "projectPath": "D:\\projects\\visual_studio_projects\\Borda.Alesta.Service.Sensor.Web\\SensorMicroservice\\SensorMicroservice.csproj",
       "packagesPath": "C:\\Users\\ertgamgam\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\visual_studio_projects\\Sensor\\SensorMicroservice\\obj\\",
+      "outputPath": "D:\\projects\\visual_studio_projects\\Borda.Alesta.Service.Sensor.Web\\SensorMicroservice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
