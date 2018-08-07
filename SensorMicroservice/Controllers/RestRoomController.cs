@@ -26,11 +26,12 @@ namespace SensorMicroservice.Controllers
         }
 
         [HttpPost]
-        public void RestRoomPost([FromBody]Converter model)
+        public void PostFromHardware([FromBody]Converter model)
         {
             string noticicationServiceBaseUrl = "";
             string restRoomNotificationPath = "";
             this.repository.PostToAnotherService(model, noticicationServiceBaseUrl, restRoomNotificationPath);
+
             this.repository.PostRequest(model);
         }
 

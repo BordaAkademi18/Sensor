@@ -32,9 +32,6 @@ namespace SensorMicroservice.Models
             this.Value = false;
         }
 
-        public void FromConverterForAdding(Converter converterModel)
-        {
-            this.HardwareId = Convert.ToInt32(converterModel.ID);
-        }
+       
     }
 }

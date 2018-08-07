@@ -19,6 +19,11 @@ namespace SensorMicroservice.Models
 
         public void onAdd() => this.Time = DateTime.Now;
 
+        public override void FromConverterForAdding(Converter converterModel)
+        {
+            base.FromConverterForAdding(converterModel);
+            this.Value = Convert.ToInt32(converterModel.Value);
+        }
 
     }
 }
