@@ -8,15 +8,19 @@ namespace SensorMicroservice.ModelInterfaces
 {
     public abstract class BaseModel
     {
+        
 
         public int HardwareId { get; set; }
 
         public int ID { get; set; }
 
+
         public virtual void FromConverterForAdding(Converter converterModel)
         {
             this.HardwareId = Convert.ToInt32(converterModel.ID);
         }
+
+        
 
     }
 }
