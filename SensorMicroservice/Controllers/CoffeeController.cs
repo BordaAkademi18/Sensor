@@ -30,15 +30,11 @@ namespace SensorMicroservice.Controllers
                 return BadRequest();
             }
 
-
             this.repository.Converter(item);
 
-        
-
-            
             return Ok(item);
         }
-        
+
 
 
     }

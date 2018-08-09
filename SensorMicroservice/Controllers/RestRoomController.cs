@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SensorMicroservice.Models;
 using SensorMicroservice.RepositoryInterfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace SensorMicroservice.Controllers
 {
@@ -19,19 +18,19 @@ namespace SensorMicroservice.Controllers
             this.repository = repository;
         }
 
+       
         [HttpGet]
         public List<Converter> Get()
         {
             return repository.GetRequest();
         }
 
+        [Authorize]
         [HttpPost]
-        public void PostFromHardware([FromBody]Converter model)
+        public void Post([FromBody]Converter model)
         {
-            string noticicationServiceBaseUrl = "";
-            string restRoomNotificationPath = "";
-            this.repository.PostToAnotherService(model, noticicationServiceBaseUrl, restRoomNotificationPath);
-
+            //string noticicationServiceBaseUrl = "http://localhost:40040";
+            //this.repository.PostToAnotherService(model, noticicationServiceBaseUrl, "api/restRoomTest");
             this.repository.PostRequest(model);
         }
 
