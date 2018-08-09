@@ -24,6 +24,5 @@ namespace SensorMicroservice.Models
             base.FromConverterForAdding(converterModel);
             this.Value = Convert.ToInt32(converterModel.Value);
         }
-
     }
 }

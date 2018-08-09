@@ -23,6 +23,7 @@ namespace SensorMicroservice.Models
         public void OnAdd()
         {
             this.BeginProcess = DateTime.Now;
+            this.EndProcess = this.BeginProcess;
             this.Value = true;
         }
 

@@ -16,7 +16,7 @@ namespace SensorMicroservice.Enum
 
         public static int[] GetAllRestRoomID()
         {
-            int[] idList = { 1, 2, 3, };
+            int[] idList = { 1, 2, 3 };
             return idList;
         }
     }

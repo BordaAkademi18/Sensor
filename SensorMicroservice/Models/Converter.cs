@@ -11,15 +11,6 @@ namespace SensorMicroservice.Models
         public string ID { get; set; }
 
         public string Value { get; set; }
-
-        public string ControlKey { get; set; }
-
-        public bool CompareKeys(string key)
-        {
-            if (this.ControlKey == key)
-                return true;
-            else
-                return false;
-        }
+              
     }
 }

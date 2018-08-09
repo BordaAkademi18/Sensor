@@ -10,8 +10,8 @@ using SensorMicroservice.Context;
 namespace SensorMicroservice.Migrations
 {
     [DbContext(typeof(SensorDbContext))]
-    [Migration("20180804142633_LocalDB")]
-    partial class LocalDB
+    [Migration("20180809074140_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,13 +29,15 @@ namespace SensorMicroservice.Migrations
 
                     b.Property<int>("HardwareId");
 
-                    b.Property<DateTime>("Time");
+                    b.Property<DateTime>("Time")
+                        .HasColumnName("Time");
 
-                    b.Property<int>("Value");
+                    b.Property<int>("Value")
+                        .HasColumnName("Value");
 
                     b.HasKey("ID");
 
-                    b.ToTable("AirQuality");
+                    b.ToTable("AirQuality","Alesta");
                 });
 
             modelBuilder.Entity("SensorMicroservice.Models.Coffee", b =>
@@ -65,17 +67,20 @@ namespace SensorMicroservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("BeginProcess");
+                    b.Property<DateTime>("BeginProcess")
+                        .HasColumnName("BeginProcess");
 
-                    b.Property<DateTime>("EndProcess");
+                    b.Property<DateTime>("EndProcess")
+                        .HasColumnName("EndProcess");
 
                     b.Property<int>("HardwareId");
 
-                    b.Property<bool>("Value");
+                    b.Property<bool>("Value")
+                        .HasColumnName("Value");
 
                     b.HasKey("ID");
 
-                    b.ToTable("RestRoom");
+                    b.ToTable("RestRoom","Alesta");
                 });
 #pragma warning restore 612, 618
         }
