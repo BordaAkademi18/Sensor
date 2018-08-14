@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -50,15 +53,22 @@ namespace SensorMicroservice
             services.AddTransient<IAirQualityRepository, AirQualityRepository>();
             services.AddTransient<IRestRoomRepository, RestRoomRepository>();
             services.AddTransient<ICoffeeRepository, CoffeeRepository>();
+            services.AddTransient(typeof(Services.NotificationService.NotificationService));
 
             services.AddDbContext<SensorDbContext>(
                 options =>
                 {
-                    options.UseSqlServer(Configuration.GetConnectionString("LocalConnection"));
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
                 }
             );
 
-            services.AddMvc();
+            //services.AddMvc();
+            {
+                services.AddMvc(options =>
+                {
+                    options.Filters.Add(new RequireHttpsAttribute());
+                });
+            }
 
         }
 
@@ -71,7 +81,14 @@ namespace SensorMicroservice
             }
             app.UseAuthentication();
 
-            app.UseMvc();
+            var options = new RewriteOptions()
+         .AddRedirectToHttps(StatusCodes.Status301MovedPermanently, 44384);
+
+            app.UseRewriter(options);
+
+            app.UseMvcWithDefaultRoute();
+
+            //app.UseMvc();
         }
     }
 }

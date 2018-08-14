@@ -9,7 +9,6 @@ namespace SensorMicroservice.RepositoryInterfaces
 {
     public interface IBaseRepository<TModel> where TModel : BaseModel 
     {
-
         void Add(TModel model);
 
         void Update(TModel model);
@@ -17,11 +16,5 @@ namespace SensorMicroservice.RepositoryInterfaces
         void Delete(TModel model);
 
         IEnumerable<TModel> GetList();
-
-      
-
-
-
-
     }
 }

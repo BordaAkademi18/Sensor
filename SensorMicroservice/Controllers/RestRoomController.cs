@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SensorMicroservice.Controllers.Filter;
 using SensorMicroservice.Models;
 using SensorMicroservice.RepositoryInterfaces;
+using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Security.Claims;
 
 namespace SensorMicroservice.Controllers
 {
@@ -18,7 +21,7 @@ namespace SensorMicroservice.Controllers
             this.repository = repository;
         }
 
-       
+
         [HttpGet]
         public List<Converter> Get()
         {
@@ -26,12 +29,12 @@ namespace SensorMicroservice.Controllers
         }
 
         [Authorize]
+        [IsTokenExpired]
         [HttpPost]
-        public void Post([FromBody]Converter model)
+        public string Post([FromBody]Converter model, string token)
         {
-            //string noticicationServiceBaseUrl = "http://localhost:40040";
-            //this.repository.PostToAnotherService(model, noticicationServiceBaseUrl, "api/restRoomTest");
             this.repository.PostRequest(model);
+            return token;
         }
 
 
