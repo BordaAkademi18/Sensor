@@ -28,18 +28,17 @@ namespace SensorMicroservice.Repositories
 
         public virtual void Add(TModel model)
         {
-            DBSet.Add(model);
-            SaveChanges();
+            throw new NotImplementedException();
         }
         
         public virtual void Delete(TModel model)
         {
-            
+            throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<TModel> GetList()
+        public virtual IEnumerable<TModel> GetList() 
         {
-            return DBSet.ToList();
+            throw new NotImplementedException();
         }
 
         public virtual void Update(TModel model)

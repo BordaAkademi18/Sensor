@@ -13,27 +13,49 @@ namespace SensorMicroservice.Controllers
     public class CoffeeController : Controller
     {
 
-        private readonly CoffeeRepository repository;
+        private readonly ICoffeeRepository repository;
 
-        public CoffeeController(CoffeeRepository repository)
+        public CoffeeController(ICoffeeRepository repository)
         {
             this.repository = repository;
         }
 
 
         [HttpPost]
-        [Route("Create")]
-        public IActionResult Create(Converter item)
+        [Route("Post")]
+        public IActionResult Post([FromBody]Converter item)
         {
             if (item == null)
             {
                 return BadRequest();
+                
             }
 
+            
             this.repository.Converter(item);
 
+        
+
+            
             return Ok(item);
         }
+
+        [HttpGet]
+        [Route("Get")]
+        public IEnumerable<Coffee> Get()
+        {
+         
+            return this.repository.GetList();
+
+        }
+
+        [Route("Clear")]
+        public void Clear()
+        {
+             
+            this.repository.Clear();
+        }
+
 
 
 

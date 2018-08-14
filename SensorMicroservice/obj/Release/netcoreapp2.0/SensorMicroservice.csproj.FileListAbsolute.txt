@@ -1,0 +1,11 @@
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\bin\Release\netcoreapp2.0\SensorMicroservice.deps.json
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\bin\Release\netcoreapp2.0\SensorMicroservice.runtimeconfig.json
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\bin\Release\netcoreapp2.0\SensorMicroservice.runtimeconfig.dev.json
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\bin\Release\netcoreapp2.0\SensorMicroservice.dll
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\bin\Release\netcoreapp2.0\SensorMicroservice.pdb
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\obj\Release\netcoreapp2.0\SensorMicroservice.csprojAssemblyReference.cache
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\obj\Release\netcoreapp2.0\SensorMicroservice.csproj.CoreCompileInputs.cache
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\obj\Release\netcoreapp2.0\SensorMicroservice.AssemblyInfoInputs.cache
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\obj\Release\netcoreapp2.0\SensorMicroservice.AssemblyInfo.cs
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\obj\Release\netcoreapp2.0\SensorMicroservice.dll
+C:\Users\ihsan.balaban\source\repos\Sensor-berkanbranch\SensorMicroservice\obj\Release\netcoreapp2.0\SensorMicroservice.pdb

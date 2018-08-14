@@ -39,8 +39,11 @@ namespace SensorMicroservice.Models
 
         }
 
-        private void OnUpdate(int level)
+        public void OnUpdate(int level)
         {
+
+            this.EndProcess = DateTime.Now;
+            this.CurrentLevel = level;
 
 
 

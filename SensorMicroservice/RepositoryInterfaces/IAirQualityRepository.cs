@@ -13,9 +13,6 @@ namespace SensorMicroservice.RepositoryInterfaces
 
         AirQuality Get(DateTime TimeBegin, DateTime TimeEnd);
 
-        void PostRequest(AirQuality model);
-
-        IEnumerable<AirQuality> GetBetweenTwoDates(string startTimeString, string endTimeString);
 
     }
 }

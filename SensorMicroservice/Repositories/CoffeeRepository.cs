@@ -30,24 +30,62 @@ namespace SensorMicroservice.Repositories
 
             int level = Convert.ToInt32(input.Value);
 
+            //Get the latest entry from coffee set.
 
-            this.Add(new Coffee
+            Coffee latestCoffee = this.DBSet
+                             .Where(x
+                                 => x.HardwareId == HardId)
+                              .OrderByDescending(x => x.ID)
+                             .Take(1)
+                             .FirstOrDefault();
+
+            if (latestCoffee == null)
             {
-                HardwareId = HardId,
+                this.Add(new Coffee
+                {
+                    HardwareId = HardId,
 
-                CurrentLevel = level
-            });
+                    CurrentLevel = level
+                });
 
+                return;
+            }
 
+            //if level is decreasing then update the latest entry and if coffee is emptied then add a new row to the database table
 
+            if (latestCoffee.CurrentLevel > level)
+            {
+                this.Update(latestCoffee,level);
+
+                if(level == 0)
+                {
+                    this.Add(new Coffee
+                    {
+                        HardwareId = HardId,
+
+                        CurrentLevel = level
+                    });
+                }
+
+            }
+
+            //if level is increasing then update the latest entry in the data set.
+            else if (latestCoffee.CurrentLevel < level)
+            {
+
+                this.Update(latestCoffee,level);
+                   
+            }
+            
         }
+
 
 
         public override void Add(Coffee model)
         {
             model.OnAdd();
 
-            sensorDbContext.Coffee.Add(model);
+            DBSet.Add(model);
 
             SaveChanges();
 
@@ -57,12 +95,29 @@ namespace SensorMicroservice.Repositories
         public override void Update(Coffee model)
         {
 
+           
 
+        }
+
+        public void Update(Coffee model , int level)
+        {
+            model.OnUpdate(level);
+
+            SaveChanges();
 
         }
 
         public override void Delete(Coffee model)
         {
+
+        }
+
+
+        public void Clear(){
+
+            foreach (var entity in this.DBSet)
+                this.DBSet.Remove(entity);
+                SaveChanges();
 
         }
 

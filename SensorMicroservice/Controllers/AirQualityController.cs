@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using SensorMicroservice.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using SensorMicroservice.RepositoryInterfaces;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,21 +18,11 @@ namespace SensorMicroservice.Controllers
             this.repository = repository;
         }
 
-        [HttpGet("dates")] //like http://localhost:51238/api/airquality/dates?starttime=2011-03-21&endtime=2017-12-22
-        public IEnumerable GetBetweenTwoDates(string startTime, string endTime)
+        [Route("test")]
+        public int test()
         {
-            return this.repository.GetBetweenTwoDates(startTime, endTime);
+            return 4;
         }
-
-        [Authorize]
-        [HttpPost]
-        public IActionResult PostFromHardware([FromBody]Converter convertModel)
-        {
-            AirQuality airQualityModel = new AirQuality();
-            airQualityModel.FromConverterForAdding(convertModel);
-            this.repository.PostRequest(airQualityModel);
-            return Ok();
-        }
-
+       
     }
 }

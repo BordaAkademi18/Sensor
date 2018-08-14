@@ -27,15 +27,9 @@ namespace SensorMicroservice.Migrations
 
                     b.Property<int>("HardwareId");
 
-                    b.Property<DateTime>("Time")
-                        .HasColumnName("Time");
-
-                    b.Property<int>("Value")
-                        .HasColumnName("Value");
-
                     b.HasKey("ID");
 
-                    b.ToTable("AirQuality","Alesta");
+                    b.ToTable("AirQuality");
                 });
 
             modelBuilder.Entity("SensorMicroservice.Models.Coffee", b =>
@@ -65,20 +59,15 @@ namespace SensorMicroservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("BeginProcess")
-                        .HasColumnName("BeginProcess");
+                    b.Property<DateTime>("BeginProcess");
 
-                    b.Property<DateTime>("EndProcess")
-                        .HasColumnName("EndProcess");
+                    b.Property<DateTime>("EndProcess");
 
                     b.Property<int>("HardwareId");
 
-                    b.Property<bool>("Value")
-                        .HasColumnName("Value");
-
                     b.HasKey("ID");
 
-                    b.ToTable("RestRoom","Alesta");
+                    b.ToTable("RestRoom");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,6 +14,8 @@ namespace SensorMicroservice.Context
 
         }
 
+
+
         public DbSet<AirQuality> AirQuality { get; set; }
         public DbSet<Coffee> Coffee { get; set; }
         public DbSet<RestRoom> RestRoom { get; set; }
